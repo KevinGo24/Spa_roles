@@ -1,5 +1,5 @@
 // importamos desde la carpeta views = login.html
-import login from "../views/login.html"
+import login from "../views/login.html?raw";
 // -------------------------------------------------
 
 export default () => {
