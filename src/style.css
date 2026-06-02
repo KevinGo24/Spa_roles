@@ -6,14 +6,74 @@
     font-style: italic;
 }
 
-body{
-    background-color: brown;
+body {
+    background: linear-gradient(150deg, chocolate, darksalmon);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
+    /* CONTROL DE ALTURA (El truco para centrar verticalmente) */
+    margin: 0;
+    min-height: 100vh; 
+    
+    /* ALINEACIÓN CON FLEXBOX */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    flex-direction: column;
+    
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.master_login{
-    border-color: black solid 3px;
-    background-color: black;
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 3px black;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1); /* Opcional: un fondo sutil para que resalte */
+}
+
+input {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+p {
+    color: white;
+    text-align: left;
+    margin: 0; /* Limpia márgenes por defecto para controlar mejor el flujo */
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover{
+    background: linear-gradient(250deg, chocolate, darksalmon);
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px black;
+}
+
+select{
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .5s;
+}
+
+select:hover{
+       background: linear-gradient(250deg, chocolate, darksalmon);
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px black;
 }
