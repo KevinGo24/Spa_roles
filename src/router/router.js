@@ -1,20 +1,24 @@
-// importo el controlador maestro
 import { master_page } from "../controller/master.controller";
-//-------------------------------------------------------------
 
-// creo una variable para bucar en el doc el id donde se cragara la vista 
-// sera una funcion sincronica
-const enrrutamiento = async (rout) =>{
-    rout.innerHTML = '';
+const enrutamiento = async (rout) => {
+    // Buscamos el contenedor real del HTML
+    const masterContainer = document.getElementById("Views"); 
 
+    if (masterContainer) {
+        masterContainer.innerHTML = ''; // Limpiamos la pantalla
+    }
+
+    // Evaluamos la ruta que llega (que ahora será '#/login')
     switch (rout) {
-        case "/login":
-            {rout.appendChild(master_page.Login)}
+            
+        case '#/dashboard':
+        case '/dashboard':
+            masterContainer.appendChild(master_page.Dashboard());
             break;
-        case "/dashboard":
-            {rout.appendChild(master_page.Dashboard)}
-            break;
+            
         default:
             break;
     }
-}
+};
+
+export {enrutamiento}
