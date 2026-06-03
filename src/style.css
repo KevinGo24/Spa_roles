@@ -24,8 +24,22 @@ body {
     
     padding: 10px;
     box-sizing: border-box;
+    animation: fondo 1s  infinite;
 }
-
+@keyframes fondo {
+    25%{
+        transition: 2s;
+        background: linear-gradient(125deg, chocolate, darksalmon);
+    }
+    50%{
+        transition: 2s;
+        background: linear-gradient(150deg, chocolate, darksalmon);
+    }
+    100%{
+        transition: 2s;
+        background: linear-gradient(200deg, chocolate, darksalmon);
+    }
+}
 .login {
     display: flex;
     flex-direction: column;
