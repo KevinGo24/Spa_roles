@@ -1,5 +1,8 @@
 {
-    "users":{
-        
-    }
+    "users":[{
+        "rol": "admin",
+        "correo": "admin@gmail.com",
+        "pass":123456
+    }]
+   
 }

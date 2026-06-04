@@ -26,68 +26,65 @@ body {
     box-sizing: border-box;
     animation: fondo 1s  infinite;
 }
-@keyframes fondo {
-    25%{
-        transition: 2s;
-        background: linear-gradient(125deg, chocolate, darksalmon);
-    }
-    50%{
-        transition: 2s;
-        background: linear-gradient(150deg, chocolate, darksalmon);
-    }
-    100%{
-        transition: 2s;
-        background: linear-gradient(200deg, chocolate, darksalmon);
-    }
-}
-.login {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: solid 3px black;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.1); /* Opcional: un fondo sutil para que resalte */
+
+
+.login-container{
+    width:400px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-input {
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
+.login-container h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
 }
 
-p {
-    color: white;
-    text-align: left;
-    margin: 0; /* Limpia márgenes por defecto para controlar mejor el flujo */
+.login-container select,
+.login-container input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
 }
 
-button{
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: .5s;
+.login-container input:focus,
+.login-container select:focus{
+    border-color:chocolate;
 }
 
-button:hover{
-    background: linear-gradient(250deg, chocolate, darksalmon);
-    transform: scale(1.1);
-    box-shadow: 10px 10px 20px black;
+.login-container button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(
+        250deg,
+        chocolate,
+        darksalmon
+    );
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-select{
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    transition: .5s;
+.login-container button:hover{
+    transform:translateY(-2px);
 }
 
-select:hover{
-       background: linear-gradient(250deg, chocolate, darksalmon);
-    transform: scale(1.1);
-    box-shadow: 10px 10px 20px black;
+.login-container p{
+    margin-top:20px;
+    text-align:center;
+}
+
+.login-container a{
+    text-decoration:none;
+    color:chocolate;
+    font-weight:bold;
 }

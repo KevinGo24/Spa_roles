@@ -7,21 +7,36 @@
     <title>spa-roles</title>
   </head>
   <body>
-    <div id="app">
-      <section class="login">
-        <p>Roles</p>
+     <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+
         <select id="Cmb_role">
-          <option value="" disabled selected>-- Elige un rol --</option>
-          <option value="admin">Administrador</option>
-          <option value="tech">Técnico</option>
-          <option value="client">Cliente / Usuario</option>
+            <option disabled selected>Seleccione un rol</option>
+            <option value="admin">Administrador</option>
+            <option value="tech">Técnico</option>
+            <option value="client">Cliente</option>
         </select>
-        <p>email</p>
-        <input type="email" name="" id="Tbx_email">
-        <p>Password</p>
-        <input type="password" name="" id="Tbx_password">
-        <button id="btn_login" onclick="login()">Log in</button>
-      </section>
+
+        <input
+            type="email"
+            id="Tbx_email"
+            placeholder="Correo electrónico"
+        >
+
+        <input
+            type="password"
+            id="Tbx_password"
+            placeholder="Contraseña"
+        >
+
+        <button id="btn_login">
+            Iniciar Sesión
+        </button>
+
+        <p>
+            ¿No tienes cuenta?
+            <a href="#" id="btn_register">Regístrate</a>
+        </p>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
